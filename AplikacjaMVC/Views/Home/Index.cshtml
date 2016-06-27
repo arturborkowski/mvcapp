@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Auto-Borek</h1>
+    <p class="lead">Dealer of a used cars in Gdansk. You can find here a car of your dream for a decent money!</p>
+    <p>
+        @Html.ActionLink(HttpUtility.HtmlDecode("Explore &raquo;"), "Index", "Cars", new { area = "" }, new { @class = "btn btn-primary btn-lg" })
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Find your car</h2>
+        <p>
+            Here you can start looking for your car. We have plenty of offers among which you will certainly find the one suitable for you. 
+        </p>
+        <p>
+            @Html.ActionLink(HttpUtility.HtmlDecode("Buy a car &raquo;"), "Index", "Cars", new { area = "" }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Sell your car</h2>
+        <p>Already have a car but you don't like it anymore? Why don't you sell it? We would love to buy it from you! After all you can buy a new one from us!</p>
+        <p>
+            @Html.ActionLink(HttpUtility.HtmlDecode("Sell a car &raquo;"), "Create", "Cars", new { area = "" }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>About us</h2>
+        <p>We are well-known used car dealer in Gdansk with over 15 years of experience. We buy, we sell and we make people happy.</p>
+        <p>
+            @Html.ActionLink(HttpUtility.HtmlDecode("More about us &raquo;"), "About", "Home", new { area = "" }, new { @class = "btn btn-default" })
+        </p>
+    </div>
+</div>
